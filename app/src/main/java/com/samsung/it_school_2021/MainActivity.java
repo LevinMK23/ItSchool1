@@ -22,15 +22,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(new DrawView(this));
         output = findViewById(R.id.output);
         Log.d("calc", "Calc app created...");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d("calc", "Calc app stopped...");
     }
 
     @Override
